@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;900&display=swap');
+@import url('https: //fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+@font-face {
+    font-family: indubitablyNF;
+    src: url(../font/IndubitablyNF.ttf);
+}
+
+:root {
+    /* DEFAULT COLOR */
+    --logoBg: #FF0000;
+    --logoFont: #FFEB3B;
+    /* GENERAL COLOR */
+    --light: #FFFFFF;
+    --dull: #F2F2F2;
+    --grey: #c3c3c3;
+    --gray: #6d6d6d;
+    --darkGrey: #454545;
+    --dark: #000000;
+    /* COLOR COMBO */
+    --oxBlood: #76323F;
+    --blackBoard: #565656;
+    --tan: #C09F80;
+    --grain: #D7CEC7;
+    /* CUSTOM COLOR */
+    --border: #834F59;
+    --borderText: #542a32;
+    --goldRod: #D4Af37;
+    --darkGoldRod: #B08F26;
+    --bg: #9f7f85;
+    --ink: #001aff;
+    /* BOX COLOR */
+    --purple: #4F407C;
+    --triadic: #34D9d9;
+    --tints: #EC3b82;
+}
