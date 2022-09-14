@@ -1,5 +1,5 @@
 <?php
-require 'Functions/Models/conn.php';
+require '/xampp/htdocs/projectApollo/Functions/Models/conn.php';
 
 if(isset($_POST['subscribe'])){
     $email = mysqli_real_escape_string($conn, $_POST['email']);

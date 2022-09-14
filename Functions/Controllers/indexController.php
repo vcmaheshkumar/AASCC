@@ -1,5 +1,5 @@
 <?php
-require "../Models/conn.php";
+require "/xampp/htdocs/projectApollo/Functions/Models/conn.php";
 
 $eventSql = "SELECT * FROM events";
 $eventQuery = $conn->query($eventSql);

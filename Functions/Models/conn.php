@@ -1,6 +1,6 @@
 <?php
 // Database Connection
-require "../../DatabaseFile/variables.php";
+require "/xampp/htdocs/projectApollo/DatabaseFile/variables.php";
 // Variable for mysqli function
 $conn = new mysqli($host,$userTag,$passTag,$databaseName);
 // Error Notifier

@@ -3,9 +3,9 @@ define('AAASCC',true);
 define('popup',true);
 $title = "AAASCC | HOME";
 include "includes/headers.php";
-require_once 'Functions/Models/ipdetect.php';
-// require_once "Functions/Controllers/indexController.php";
-require_once 'Functions/Controllers/newsLetterConnect.php';
+require 'Functions/Models/ipdetect.php';
+require "Functions/Controllers/indexController.php";
+require 'Functions/Controllers/newsLetterConnect.php';
 ?>
 <!-- Static Corousel -->
     <!-- /CAROUSEL STARTS/ -->
@@ -92,7 +92,7 @@ require_once 'Functions/Controllers/newsLetterConnect.php';
                 <div class="news">
                     <div class="detail">
                         <div class="name">
-                            <a><?php echo $newsTitle; ?></a>
+                            <a><?php  echo $newsTitle; ?></a>
                         </div>
                         <div class="time"><?php echo $circularDate; ?></div>
                         <div class="event-body"><?php echo $circularDepartment; ?>|<?php echo $circularDetails; ?></div>

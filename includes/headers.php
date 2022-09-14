@@ -1,10 +1,11 @@
 <?php
-error_reporting(0);
+// error_reporting(0);
 if(!defined('AAASCC')){
-    header('Location: http://localhost/projectApollo');
+    header('Location: http://localhost/projectApollo/home');
 }
+require "/xampp/htdocs/projectApollo/DatabaseFile/variables.php";
 $ip = $_SERVER['REMOTE_ADDR'];
-$VisitorConn = mysqli_connect('localhost','root','','projectApollo');
+$VisitorConn = mysqli_connect($host,$userTag,$passTag,$databaseName);
 $visitorQuery = "INSERT INTO visitorscounter (visitorCounter) VALUE ('$ip')";
 mysqli_query($VisitorConn, $visitorQuery);
 ?>
