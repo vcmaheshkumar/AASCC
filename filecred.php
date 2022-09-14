@@ -48,7 +48,7 @@ if(isset($_POST['submit'])){
    <div class="row justify-content-center">
       <div class="col-lg-5">
          <div class="card shadow-lg border-0 rounded-lg mt-5">
-               <a href="logout.php" class="btn btn-danger">Logout</a>
+               <a href="http://localhost/projectApollo/logout" class="btn btn-danger">Logout</a>
             <div class="card-header">
                <h3 class="text-center font-weight-light my-4">Create users</h3>
                <h5 class="text-center font-weight-light my-4"><?php echo $_SESSION['studentleader_name']; ?></h5>

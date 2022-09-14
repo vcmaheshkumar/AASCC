@@ -1,7 +1,6 @@
 <?php
 error_reporting(0);
-include "../Functions/Models/conn.php";
-include "includes/title.php";
+include "/xampp/htdocs/projectApollo/Functions/Models/conn.php";
 if(!defined('student')){
     header('Location: http://localhost/projectApollo/students-portal');
 }
