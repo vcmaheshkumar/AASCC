@@ -1,0 +1,171 @@
+# REWRITE ENGINE ON
+RewriteEngine on
+# INDEX PAGE REWRITE ENGINE
+RewriteRule ^home?$ index.php
+RewriteRule ^express-your-words?$ alumni/index.php
+# ABOUT PAGE REWRITE ENGINE
+RewriteRule ^about/faculty?$ pages/about/faculties.php
+RewriteRule ^about/students?$ pages/about/students.php
+RewriteRule ^about/alumni?$ pages/about/alumni.php
+RewriteRule ^about/moto?$ pages/about/moto.php
+RewriteRule ^about/mission-vision?$ pages/about/mission.php
+# STUDENTS PAGE REWRITE ENGINE
+RewriteRule ^students/attendance-rules?$ pages/about/students/attendance-rules.php
+RewriteRule ^students/events?$ pages/about/students/cultures-sports.php
+RewriteRule ^students/transport?$ pages/about/students/transport.php
+RewriteRule ^students/benefits?$ pages/about/students/geographical-benefits.php
+RewriteRule ^students/exams?$ pages/about/students/examinations-practicals.php
+RewriteRule ^students/participation?$ pages/about/students/programs-participation.php
+RewriteRule ^students/regulations?$ pages/about/students/rules-regulations.php
+# ACADEMY PAGE REWRITE ENGINE
+RewriteRule ^placements?$ pages/academy/Placement.php
+RewriteRule ^courses?$ pages/academy/Courses.php
+RewriteRule ^department?$ pages/academy/Department.php
+RewriteRule ^library?$ pages/academy/Library.php
+RewriteRule ^publication?$ pages/academy/Publication.php
+# PAGES REWRITE ENGINE
+RewriteRule ^gallery?$ pages/gallery.php
+RewriteRule ^admission?$ pages/admission.php
+RewriteRule ^contact?$ pages/Contact.php
+# SOCIAL PAGE REWRITE ENGINE
+RewriteRule ^college/media?$ social/index.php
+# LOGIN REWRITE ENGINE
+RewriteRule ^candidates-system?$ login.php
+# REPRESENTATIVE REWRITE ENGINE
+RewriteRule ^student-representative?$ filecred.php
+RewriteRule ^student-representative-logout?$ logout.php
+# PARENTS REWRITE ENGINE
+RewriteRule ^parents-portal?$ parents/index.php
+RewriteRule ^parents-message?$ parents/message.php
+RewriteRule ^parents-logout?$ parents/logout.php
+# STUDENTS REWRITE ENGINE
+RewriteRule ^students-portal?$ students/index.php
+RewriteRule ^students-message?$ students/messages.php
+RewriteRule ^students-logout?$ students/logout.php
+# ERROR PAGES
+RewriteRule ^BadRequest?$ error/400.php
+RewriteRule ^AuthorizationRequired?$ error/401.php
+RewriteRule ^Forbidden?$ error/403.php
+RewriteRule ^NotFound?$ error/404.php
+RewriteRule ^RequestTimeOut?$ error/408.php
+RewriteRule ^Gone?$ error/410.php
+RewriteRule ^InternalServerErrorsInWebsite?$ error/500.php
+RewriteRule ^BadGateway?$ error/502.php
+RewriteRule ^ServiceTemporarilyUnavailable?$ error/503.php
+RewriteRule ^GatewayTimeout?$ error/504.php
+# ADMIN PAGES
+RewriteRule ^management?$ system/index.php
+RewriteRule ^administration?$ system/admin/index.php
+RewriteRule ^report-of-faculty-absent?$ system/admin/faculty-absentees-report.php
+RewriteRule ^report-of-student-absent?$ system/admin/candidate-absentees-report.php
+RewriteRule ^admin/attendance/report-of-student-absents?$ system/admin/pages/attendance/candidate-absentees-report.php
+RewriteRule ^admin/attendance/report-of-faculty-absents?$ system/admin/pages/attendance/faculty-absentees-report.php
+# ADD FACULTIES PAGE
+RewriteRule ^admin/faculty?$ system/admin/pages/faculty.php
+RewriteRule ^admin/add-faculty?$ system/admin/pages/add-faculty.php
+RewriteRule ^admin/delete-faculty?$ system/admin/Functions/Controllers/facultyDel.php
+RewriteRule ^admin/export-faculty?$ system/admin/pages/faculty-export.php
+# ADD CANDIDATE PAGE
+RewriteRule ^admin/student?$ system/admin/pages/candidate.php
+RewriteRule ^admin/add-candidate?$ system/admin/pages/add-candidate.php
+RewriteRule ^admin/delete-candidate?$ system/admin/Functions/Controllers/candidateDel.php
+RewriteRule ^admin/export-candidate?$ system/admin/pages/candidate-export.php
+# ATTENDANCE PAGE
+RewriteRule ^admin/attendance/faculties?$ system/admin/pages/attendance/faculties.php
+RewriteRule ^admin/attendance/candidates?$ system/admin/pages/attendance/candidates.php
+# UPDATE PAGES
+RewriteRule ^admin/update/overview?$ system/admin/pages/updates/index.php
+# EVENT PAGES
+RewriteRule ^admin/update/events?$ system/admin/pages/updates/events.php
+RewriteRule ^admin/update/add-event?$ system/admin/pages/updates/add-event.php
+RewriteRule ^admin/update/delete-event?$ system/admin/Functions/Controllers/eventDel.php
+RewriteRule ^admin/update/event/update?$ system/admin/pages/updates/update-event.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule ^admin/update/event/update/([0-9]+)$ admin/update/event/update?id=$1 [QSA,L] #[A-Z0-9]
+# CIRCULAR PAGES
+RewriteRule ^admin/update/circular?$ system/admin/pages/updates/circular.php
+RewriteRule ^admin/update/add-circular?$ system/admin/pages/updates/add-circular.php
+RewriteRule ^admin/update/delete-circular?$ system/admin/Functions/Controllers/circularDel.php
+RewriteRule ^admin/update/circular/update?$ system/admin/pages/updates/update-circular.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule ^admin/update/circular/update/([0-9]+)$ admin/update/circular/update?id=$1 [QSA,L] #[A-Z0-9]
+# NEWS PAGES
+RewriteRule ^admin/update/news?$ system/admin/pages/updates/news.php
+RewriteRule ^admin/update/add-news?$ system/admin/pages/updates/add-news.php
+RewriteRule ^admin/update/delete-news?$ system/admin/Functions/Controllers/newsDel.php
+RewriteRule ^admin/update/news/update?$ system/admin/pages/updates/update-news.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule ^admin/update/news/update/([0-9]+)$ admin/update/news/update?id=$1 [QSA,L] #[A-Z0-9]
+# PUBLICATION PAGES
+RewriteRule ^admin/update/publication?$ system/admin/pages/updates/publications.php
+RewriteRule ^admin/update/add-publication?$ system/admin/pages/updates/add-publication.php
+RewriteRule ^admin/update/delete-publication?$ system/admin/Functions/Controllers/publicationDel.php
+RewriteRule ^admin/update/publication/update?$ system/admin/pages/updates/update-publication.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule ^admin/update/publication/update/([0-9]+)$ admin/update/publication/update?id=$1 [QSA,L] #[A-Z0-9]
+# LIBRARY PAGE
+RewriteRule ^admin/update/library?$ system/admin/pages/updates/library.php
+# GALLERY PAGES
+RewriteRule ^admin/update/gallery?$ system/admin/pages/updates/Gallery.php
+RewriteRule ^admin/update/add-images?$ system/admin/pages/updates/add-images.php
+RewriteRule ^admin/update/delete-image?$ system/admin/Functions/Controllers/galleryDel.php
+RewriteRule ^admin/update/gallery/update?$ system/admin/pages/updates/update-gallery.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule ^admin/update/gallery/update/([0-9]+)$ admin/update/gallery/update?id=$1 [QSA,L] #[A-Z0-9]
+# NOTIFICATION PAGE
+RewriteRule ^admin/update/notification?$ system/admin/pages/updates/approval.php
+RewriteRule ^admin/update/delete-alumni?$ system/admin/Functions/Controllers/alumniDel.php
+#REQUEST PAGE
+RewriteRule ^admin/request?$ system/admin/pages/request.php
+# MESSAGE PAGE
+RewriteRule ^admin/chat?$ system/admin/message.php
+# REGISTRATION PAGE
+RewriteRule ^admin/create/users?$ system/admin/pages/register_form.php
+# QR GENERATOR
+RewriteRule ^admin/qrcode/generator?$ system/admin/generate-qrcode.php
+# LOGOUT PAGES
+RewriteRule ^admin/logout?$ system/admin/logout.php
+# FACULTY PAGES
+RewriteRule ^faculty?$ system/users/index.php
+RewriteRule ^faculties/add/candidate?$ system/users/pages/add.php
+RewriteRule ^faculties/marks?$ system/users/pages/marks.php
+RewriteRule ^faculties/materials/upload?$ system/users/pages/materials.php
+RewriteRule ^faculties/attendance?$ system/users/pages/attendance.php
+RewriteRule ^faculties/attendance-change-show?$ system/users/pages/attendanceChangerShow.php
+RewriteRule ^faculties/attendance-change?$ system/users/pages/attendanceChanger.php
+RewriteRule ^faculties/candidate-show?$ system/users/candidattendshow.php
+RewriteRule ^faculties/marks-changer?$ system/users/pages/marksChanger.php
+RewriteRule ^faculties/marks-changer-show?$ system/users/pages/marksChangerShow.php
+RewriteRule ^faculties/changer?$ system/users/pages/changer.php
+RewriteRule ^faculties/message?$ system/users/message.php
+RewriteRule ^logout?$ system/users/logout.php
+# LIBRARIAN PAGE
+RewriteRule ^library-management?$ Librarian/index.php
+RewriteRule ^add-entry?$ Librarian/add-entry.php
+RewriteRule ^update?$ Librarian/update-entry.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule ^updatelib/([0-9]+)$ update?id=$1 [QSA,L]
+RewriteRule ^logout?$ Librarian/logout.php
+# ATTENDANCE MANAGER
+RewriteRule ^attendance-login?$ attendance-system/index.php
+RewriteRule ^logout?$ attendance-system/logout.php
+# EXTENSION REMOVER
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+# 404 WHILE USING .PHP
+RewriteCond %{THE_REQUEST} "^[^ ]* .*?\.php[? ].*$"
+RewriteRule .* - [L,R=404]
+

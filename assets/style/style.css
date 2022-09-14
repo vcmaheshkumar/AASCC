@@ -126,7 +126,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1000;
+    z-index: 9999;
     transition: all .2ms;
 }
 
@@ -1255,9 +1255,9 @@ header nav ul li:hover>ul {
     opacity: 0.7;
 }
 
-.student-container .student-content .studentRightBar .sePortals .portalLinks h4 .fal {
-    float: right;
-    visibility: hidden;
+.student-container .student-content .studentRightBar .sePortals .portalLinks h4 .fas {
+    float: right !important;
+    visibility: hidden !important;
 }
 
 .student-container .student-content .studentRightBar .sePortals .portalLinks h4 a i {
@@ -1265,12 +1265,12 @@ header nav ul li:hover>ul {
 }
 
 .student-container .student-content .studentRightBar .sePortals .portalLinks h4:hover {
-    background: rgba(255, 255, 255, 0.5);
-    width: 100%;
-    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.5) !important;
+    width: 100% !important;
+    border-radius: 5px !important;
 }
 
-.student-container .student-content .studentRightBar .sePortals .portalLinks h4:hover .fal {
+.student-container .student-content .studentRightBar .sePortals .portalLinks h4:hover .fas {
     visibility: visible;
     opacity: 0.6;
 }
@@ -1379,6 +1379,23 @@ header nav ul li:hover>ul {
 .alumniBody .alumniPost .alumniPostInfo .alumniPostText {
     font-size: 14px;
     padding: 5px;
+}
+
+@media screen and (max-width:732px) {
+    .alumniBody .alumniPost {
+        flex-direction: column;
+        margin-top: 30px;
+        text-align: center;
+    }
+    .alumniBody .alumniPost .alumniPostInfo .alumniPostText {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width:396px) {
+    .alumniBody .alumniPost {
+        margin-top: 60px;
+    }
 }
 
 
@@ -1536,6 +1553,7 @@ header nav ul li:hover>ul {
     width: 100%;
     vertical-align: middle;
     transition: all 0.3s ease;
+    margin: auto;
 }
 
 .gallery .image:hover img {
@@ -1735,6 +1753,45 @@ header nav ul li:hover>ul {
     padding: 10px;
 }
 
+@media screen and (max-width: 1120px) {
+    .admission h1.titlea {
+        margin-top: 7%;
+    }
+    .admission .offices .office {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 898px) {
+    .admission h1.titlea {
+        margin-top: 10%;
+    }
+}
+
+@media screen and (max-width: 656px) {
+    .admission h1.titlea {
+        margin-top: 15%;
+    }
+}
+
+@media screen and (max-width: 418px) {
+    .admission h1.titlea {
+        margin-top: 18%;
+    }
+}
+
+@media screen and (max-width: 346px) {
+    .admission h1.titlea {
+        margin-top: 22%;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .admission h1.titlea {
+        margin-top: 25%;
+    }
+}
+
 
 /* ADMISSION ENDS HERE */
 
@@ -1867,6 +1924,13 @@ header nav ul li:hover>ul {
     }
 }
 
+@media screen and (max-width: 374px) {
+    .contact-info,
+    .contact-info i {
+        font-size: 12px;
+    }
+}
+
 
 /*css for alert messages*/
 
@@ -1972,7 +2036,16 @@ header nav ul li:hover>ul {
     color: #7b8ca0;
 }
 
+@media screen and (max-width: 1128px) {
+    .courseswrapper .coursesheader {
+        margin-top: 10%;
+    }
+}
+
 @media screen and (max-width: 1024px) {
+    .courseswrapper .coursesheader {
+        margin-top: 10%;
+    }
     .coursescards_wrap .coursescard_item {
         width: 33%;
     }
@@ -1994,6 +2067,18 @@ header nav ul li:hover>ul {
     }
     .courseswrapper .coursesheader {
         font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 404px) {
+    .courseswrapper .coursesheader {
+        margin-top: 20%;
+    }
+}
+
+@media screen and (max-width: 244px) {
+    .courseswrapper .coursesheader {
+        margin-top: 25%;
     }
 }
 
