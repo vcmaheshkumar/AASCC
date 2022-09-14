@@ -21,7 +21,7 @@ mysqli_query($VisitorConn, $visitorQuery);
     <link rel="stylesheet" href="http://localhost/projectApollo/assets/style/style.css">
     <link rel="stylesheet" href="http://localhost/projectApollo/assets/style/popup.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/1d2f6cb552.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/1d2f6cb552.js"></script>
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" /> -->
 
     <!-- META TAGS -->
